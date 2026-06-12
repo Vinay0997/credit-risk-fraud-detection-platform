@@ -1,0 +1,26 @@
+project:
+  name: credit-risk-fraud-platform
+  owner: risk-analytics
+  environment: local-demo
+
+data:
+  synthetic_rows: 5000
+  processed_path: data/processed/risk_events.csv
+  policy_docs_path: data/regulations
+
+models:
+  random_seed: 42
+  credit_target: default_label
+  fraud_target: fraud_label
+  approval_cutoff: 0.35
+  fraud_alert_cutoff: 0.65
+
+monitoring:
+  psi_warning_threshold: 0.10
+  psi_critical_threshold: 0.25
+  minimum_reference_rows: 1000
+
+governance:
+  model_risk_tier: tier_2
+  validation_standard: SR 11-7 aligned
+  evidence_retention_years: 7

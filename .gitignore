@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local config and secrets
+.env
+*.local
+
+# Generated data and artifacts
+data/processed/
+artifacts/
+mlruns/
+models/
+reports/
+
+# IDE and OS
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
