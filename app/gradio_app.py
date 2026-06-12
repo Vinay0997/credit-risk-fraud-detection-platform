@@ -4,11 +4,17 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from pathlib import Path
 from typing import Any
 
 import gradio as gr
 import pandas as pd
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SRC_PATH = PROJECT_ROOT / "src"
+if str(SRC_PATH) not in sys.path:
+    sys.path.insert(0, str(SRC_PATH))
 
 from credit_risk_platform.data.make_dataset import generate_synthetic_risk_events
 from credit_risk_platform.explainability.shap_report import explain_records
