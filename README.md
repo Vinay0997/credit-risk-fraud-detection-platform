@@ -111,6 +111,18 @@ Optional PySpark feature job:
 python -m credit_risk_platform.data.spark_feature_pipeline --input data/processed/risk_events.csv --output data/processed/spark_features
 ```
 
+## Streamlit Web Interface
+
+Run the local web interface:
+
+```powershell
+streamlit run app/streamlit_app.py
+```
+
+The Streamlit app can generate synthetic data, train the credit and fraud models, score the portfolio, show explanations, simulate drift monitoring, answer policy questions, and export demo outputs.
+
+For Google Colab launch cells, use [Colab Streamlit Guide](docs/COLAB_STREAMLIT_GUIDE.md).
+
 ## Architecture Summary
 
 ```mermaid
@@ -139,4 +151,5 @@ The generated dataset is synthetic. The policy files in `data/regulations/` are 
 - [Business Architecture](docs/BUSINESS_ARCHITECTURE.md)
 - [Model Governance](docs/MODEL_GOVERNANCE.md)
 - [Project Brief](docs/PROJECT_BRIEF.md)
+- [Colab Streamlit Guide](docs/COLAB_STREAMLIT_GUIDE.md)
 - [GitHub Push Guide](docs/GITHUB_PUSH_GUIDE.md)

@@ -49,7 +49,8 @@ def explain_records(
         importances = _feature_importance_fallback(model, feature_names)
         numeric_sample = sample.astype(float)
         centered = numeric_sample - numeric_sample.mean(axis=0)
-        scaled = centered / (numeric_sample.std(axis=0).replace(0, 1))
+        denominator = numeric_sample.std(axis=0).replace(0, 1).fillna(1)
+        scaled = centered / denominator
         values = scaled.to_numpy() * importances
 
     explanations: list[dict[str, Any]] = []
