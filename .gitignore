@@ -21,7 +21,7 @@ env/
 data/processed/
 artifacts/
 mlruns/
-models/
+/models/
 reports/
 
 # IDE and OS
