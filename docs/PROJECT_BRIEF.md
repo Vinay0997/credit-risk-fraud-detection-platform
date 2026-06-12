@@ -31,7 +31,7 @@ The public repository uses synthetic data and sample policy documents, while the
 | Lifecycle | MLflow-ready tracking hooks |
 | Data platform | Snowflake feature view examples |
 | LLM and RAG | Local TF-IDF retrieval demo, Azure OpenAI integration placeholders |
-| App demo | Optional Streamlit app |
+| App demo | Gradio web interface |
 | Testing | pytest |
 
 ## Business Value

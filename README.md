@@ -23,7 +23,7 @@ Risk teams need faster, explainable, and audit-ready decisions across credit und
 ```text
 .
 +-- app/
-|   +-- streamlit_app.py
+|   +-- gradio_app.py
 +-- config/
 |   +-- app_config.yaml
 +-- data/
@@ -103,7 +103,7 @@ For closer alignment with the enterprise stack in the project description:
 pip install -r requirements-full.txt
 ```
 
-Optional packages enable XGBoost, SHAP, PyTorch, PySpark, Evidently AI, MLflow, LangChain, Azure OpenAI integration points, and Streamlit.
+Optional packages enable XGBoost, SHAP, PyTorch, PySpark, Evidently AI, MLflow, LangChain, and Azure OpenAI integration points.
 
 Optional PySpark feature job:
 
@@ -111,17 +111,17 @@ Optional PySpark feature job:
 python -m credit_risk_platform.data.spark_feature_pipeline --input data/processed/risk_events.csv --output data/processed/spark_features
 ```
 
-## Streamlit Web Interface
+## Gradio Web Interface
 
 Run the local web interface:
 
 ```powershell
-streamlit run app/streamlit_app.py
+python app/gradio_app.py
 ```
 
-The Streamlit app can generate synthetic data, train the credit and fraud models, score the portfolio, show explanations, simulate drift monitoring, answer policy questions, and export demo outputs.
+The Gradio app can generate synthetic data, train the credit and fraud models, score the portfolio, show explanations, simulate drift monitoring, answer policy questions, and export demo outputs.
 
-For Google Colab launch cells, use [Colab Streamlit Guide](docs/COLAB_STREAMLIT_GUIDE.md).
+For Google Colab launch cells, use [Colab Gradio Guide](docs/COLAB_GRADIO_GUIDE.md).
 
 ## Architecture Summary
 
@@ -151,5 +151,5 @@ The generated dataset is synthetic. The policy files in `data/regulations/` are 
 - [Business Architecture](docs/BUSINESS_ARCHITECTURE.md)
 - [Model Governance](docs/MODEL_GOVERNANCE.md)
 - [Project Brief](docs/PROJECT_BRIEF.md)
-- [Colab Streamlit Guide](docs/COLAB_STREAMLIT_GUIDE.md)
+- [Colab Gradio Guide](docs/COLAB_GRADIO_GUIDE.md)
 - [GitHub Push Guide](docs/GITHUB_PUSH_GUIDE.md)
